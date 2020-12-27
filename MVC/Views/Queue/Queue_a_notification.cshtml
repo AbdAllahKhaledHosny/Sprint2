@@ -1,0 +1,22 @@
+﻿@model MVC.Models.Queue
+@{
+    ViewBag.Title = "Queue_a_notification";
+}
+
+<h2>Queue_a_notification</h2>
+
+<div class="form-body">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.notification_context)
+        @Html.EditorFor(model => model.notification_context)
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Queue" class="btn button" />
+    </div>
+    }
+</div>
+
